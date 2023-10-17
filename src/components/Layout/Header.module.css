@@ -1,0 +1,20 @@
+.navheightgrey
+{
+    height: 170px;
+    color: white;
+    font-size: 60px;
+    justify-content: center;
+    align-items: start;
+    font-weight:bolder;
+}
+.navheightlight{
+    height:60px;
+}
+
+/* Header.module.css */
+.customBrand {
+    font-family: 'Your Desired Font', sans-serif; /* Change 'Your Desired Font' */
+    font-size: 18px; /* Change the font size as needed */
+    margin: 0 35px; /* Change the margin to control spacing */
+  }
+  

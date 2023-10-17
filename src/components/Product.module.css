@@ -1,0 +1,29 @@
+.container h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Metal Mania";
+    font-weight: bolder;
+
+    
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .productRow {
+    justify-content: space-between;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  

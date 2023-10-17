@@ -1,0 +1,5 @@
+sup {
+    vertical-align: super; /* Align the text vertically as superscript */
+    font-size: smaller;    /* Reduce the font size for superscript */
+    line-height: normal;   /* Reset line height to default */
+  }
