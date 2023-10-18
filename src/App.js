@@ -8,6 +8,9 @@ import Button from 'react-bootstrap/Button';
 import CartProvider from './store/CartProvider';
 import Main from './Main';
 import About from './components/About/About';
+import Home from './components/Home/Home'
+
+
 import { createBrowserRouter,
   RouterProvider,
 Route,
@@ -23,7 +26,12 @@ const router=createBrowserRouter([
 {
   path:'/About',
   element:<About/>
+},
+{
+  path:'/Home',
+  element:<Home/>
 }
+
 
 
 ]);

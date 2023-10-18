@@ -21,8 +21,11 @@ const Header = (props) => {
       
       <div  className={classes.header}>
          <div  className={classes.list} >
-          <NavLink  to="#"   
+          <NavLink  to="/Home"   
           
+          className={({isActive})=>
+          isActive?classes.active:undefined
+          }
         
           >HOME</NavLink>
           

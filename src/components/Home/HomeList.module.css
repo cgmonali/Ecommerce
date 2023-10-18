@@ -1,0 +1,10 @@
+.tourheading{
+    text-align: center;
+    font-family: "Metal Mania";
+    font-size: 30px;
+    margin: 40px 0;
+    font-weight: bolder;
+    letter-spacing: -2px;
+    transform: scaleY(1.8);
+    transform: scaleX(1);
+}
