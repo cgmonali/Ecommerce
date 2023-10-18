@@ -17,8 +17,6 @@ const DisplayProducts = (props) => {
    
    const addToCartHandler = (amount) => {
        setClicked(false);
-     
-
         cartCtx.addItem({
           id: props.id,
           title: props.title,

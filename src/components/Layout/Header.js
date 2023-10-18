@@ -6,8 +6,9 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import CartContext from '../../store/cart-context';
 import { useContext } from 'react';
+import {NavLink} from 'react-router-dom'
 
-
+import { Outlet } from 'react-router-dom';
 const Header = (props) => {
 
   const cartCtx = useContext(CartContext);
@@ -18,33 +19,49 @@ const Header = (props) => {
     <Fragment>
       <header>
       
-      <Navbar bg="dark" variant='dark' fixed="top">
-         <Container className="justify-content-center" >
-          <Navbar.Brand  className={classes.customBrand} href="#">HOME</Navbar.Brand>
-          <Navbar.Brand  className={classes.customBrand} href="#">STORE</Navbar.Brand>
-          <Navbar.Brand  className={classes.customBrand}  href="#">ABOUT</Navbar.Brand>
-</Container>
-          <Navbar.Brand  className="justify-content-end">
+      <div  className={classes.header}>
+         <div  className={classes.list} >
+          <NavLink  to="#"   
+          
+        
+          >HOME</NavLink>
+          
+          <NavLink  
+          to="/" 
+          className={({isActive})=>
+        isActive?classes.active:undefined
+        }
+        end
+        >STORE</NavLink>
+
+          <NavLink   to="/About" 
+          className={({isActive})=>
+          isActive?classes.active:undefined
+          }
+          >ABOUT</NavLink>
+</div>
+<div className={classes.cartIcon}>
+          <div  className="justify-content-end">
         
           <HeaderCartButton onClick={props.onShowCart} />
           <sup>{num}</sup>
-        </Navbar.Brand>
+        </div>
 
-
+</div>
           
         
-      </Navbar>
+      </div>
     
         
-    <Navbar bg="light" className={classes.navheightlight} > </Navbar>
-    <Navbar bg="secondary" className={classes.navheightgrey}>
-    The Generics</Navbar>
+    <div bg="light" className={classes.navheightlight} > </div>
+    <div bg="secondary" className={classes.navheightgrey}>
+    The Generics</div>
 
 
 
 
       </header>
-      
+      <Outlet/>
     </Fragment>
   );
 };

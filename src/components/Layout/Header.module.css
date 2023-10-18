@@ -1,24 +1,67 @@
-.navheightgrey
-{
-    height: 170px;
-    color: white;
-    font-size: 60px;
-    justify-content: center;
-    align-items: start;
-    font-weight:bolder;
-}
-.navheightlight{
-    height:60px;
-}
-
 /* Header.module.css */
-.customBrand {
-    font-family: 'Your Desired Font', sans-serif; /* Change 'Your Desired Font' */
-    font-size: 18px; /* Change the font size as needed */
-    margin: 0 35px; /* Change the margin to control spacing */
+
+.navheightgrey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bolder;
+    background-color: rgb(137, 145, 153);
   }
   
-  sup{
+  
+  
+  sup {
     color: rgb(130, 203, 226);
-    font-size: 30px;
+    font-size: 25px;
+  }
+  
+  .list {
+    /* margin-left: auto; */
+    
+ 
+    height: 100%; /* Fill the entire height of the navbar */
+  }
+  
+  .list a {
+    
+    text-decoration: none;
+    color: white;
+    padding: 0 20px; /* Add some spacing between links */
+    font-size: 20px;
+  }
+  
+  .list a:hover,
+  .list a.active {
+    color: rgb(50, 127, 160);
+  }
+  
+  .cartIcon {
+    margin-left: auto; /* Push the cart icon to the right end of the navbar */
+    display: flex; /* Add display property to correctly align the cart icon */
+    align-items: center;
+   
+    position: absolute;
+    right: 0%;
+    
+  }
+  
+  .header{
+   
+
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    justify-content: center;
+    list-style-type: none;
+    border-bottom: 0.1rem solid white;
+    position: fixed;
+    top: 0%;
+    background: black;
+    width: 100%;
+    z-index: 1;
   }

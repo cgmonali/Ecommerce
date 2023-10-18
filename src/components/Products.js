@@ -59,9 +59,9 @@ function Products() {
   ));
 
   return (
-    <div className={classes.container}>
+    <div className={classes.productContainer}>
       <h2>MUSIC</h2>
-      <section className={classes.content}>
+      <section className={classes.productContent}>
         <Row xs={2} md={2} lg={2} className={classes.productRow}>
           {productList}
         </Row>

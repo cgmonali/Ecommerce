@@ -6,29 +6,37 @@ import Cart from './components/Cart/Cart';
 import Header from './components/Layout/Header';
 import Button from 'react-bootstrap/Button';
 import CartProvider from './store/CartProvider';
+import Main from './Main';
+import About from './components/About/About';
+import { createBrowserRouter,
+  RouterProvider,
+Route,
+} from 'react-router-dom'
+
+
+
+const router=createBrowserRouter([
+{
+  path:'/',
+  element:<Main/> 
+},
+{
+  path:'/About',
+  element:<About/>
+}
+
+
+]);
+
+
 function App() {
 
-  const [cartIsShown, setCartIsShown] = useState(false);
 
-  const showCartHandler = () => {
-    setCartIsShown(true);
-  };
-
-  const hideCartHandler = () => {
-    setCartIsShown(false);
-  };
 
 
   return (
-    <CartProvider>
-       {cartIsShown && <Cart onClose={hideCartHandler} />}
-       <Header onShowCart={showCartHandler} />
-    <Products/>
+    <RouterProvider router={router} />
 
-   
-
-
-    </CartProvider>
   );
 }
 
