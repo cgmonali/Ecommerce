@@ -5,8 +5,30 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import classes from './DisplayProducts.module.css';
+import CartContext from '../store/cart-context';
+import { useState } from 'react';
+import { useContext } from 'react';
+
+
 const DisplayProducts = (props) => {
- 
+    const cartCtx = useContext(CartContext);
+    const price = `$${props.price.toFixed(2)}`;
+   const [clicked,setClicked]=useState(true);
+   
+   const addToCartHandler = (amount) => {
+       setClicked(false);
+     
+
+        cartCtx.addItem({
+          id: props.id,
+          title: props.title,
+          imageUrl: props.imageUrl,
+          price: props.price,
+          clicked: clicked ,// Updated remaining amount
+        });
+      };
+
+
 
   return (
     <div className={classes.eachcontainer}>
@@ -16,8 +38,8 @@ const DisplayProducts = (props) => {
         <div className={classes.imagecontainer}>
         <img src={props.imageUrl} alt={props.title}  /></div>
         <div className={classes.productdetails}>
-            <span>${props.price}</span>
-            <Button variant="primary">Add to Cart</Button> 
+            <span>{price}</span>
+            <Button  onClick={addToCartHandler} variant="primary">Add to Cart</Button> 
         </div>
         
       </div>

@@ -5,6 +5,7 @@ import './App.css';
 import Cart from './components/Cart/Cart';
 import Header from './components/Layout/Header';
 import Button from 'react-bootstrap/Button';
+import CartProvider from './store/CartProvider';
 function App() {
 
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -19,7 +20,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <CartProvider>
        {cartIsShown && <Cart onClose={hideCartHandler} />}
        <Header onShowCart={showCartHandler} />
     <Products/>
@@ -27,7 +28,7 @@ function App() {
    
 
 
-    </div>
+    </CartProvider>
   );
 }
 

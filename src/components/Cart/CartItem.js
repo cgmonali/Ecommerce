@@ -1,9 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import classes from './CartItem.module.css';
+import CartContext from '../../store/cart-context';
+import { useContext } from 'react';
 
 const CartItem = (props) => {
+
+  const cartCtx = useContext(CartContext);
   const price = `$${props.price.toFixed(2)}`;
+
+
+
+
 
   return (
     <>
@@ -16,7 +24,7 @@ const CartItem = (props) => {
           <span >{price}</span>
           
           <span className={classes.quantitynremove}>x {props.quantity}
-          <button className={classes.removebtn}>REMOVE</button></span>
+          <button  onClick={props.onRemove} className={classes.removebtn}>REMOVE</button></span>
           
         </div>
      

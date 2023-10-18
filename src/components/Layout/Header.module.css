@@ -18,3 +18,7 @@
     margin: 0 35px; /* Change the margin to control spacing */
   }
   
+  sup{
+    color: rgb(130, 203, 226);
+    font-size: 30px;
+  }

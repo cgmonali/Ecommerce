@@ -4,8 +4,16 @@ import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import CartContext from '../../store/cart-context';
+import { useContext } from 'react';
+
 
 const Header = (props) => {
+
+  const cartCtx = useContext(CartContext);
+  const num=cartCtx.items.length;
+
+
   return (
     <Fragment>
       <header>
@@ -19,7 +27,7 @@ const Header = (props) => {
           <Navbar.Brand  className="justify-content-end">
         
           <HeaderCartButton onClick={props.onShowCart} />
-        
+          <sup>{num}</sup>
         </Navbar.Brand>
 
 
