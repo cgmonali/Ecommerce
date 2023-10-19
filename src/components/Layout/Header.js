@@ -42,6 +42,13 @@ const Header = (props) => {
           isActive?classes.active:undefined
           }
           >ABOUT</NavLink>
+
+
+<NavLink   to="/Contact" 
+          className={({isActive})=>
+          isActive?classes.active:undefined
+          }
+          >Contact Us</NavLink>
 </div>
 <div className={classes.cartIcon}>
           <div  className="justify-content-end">

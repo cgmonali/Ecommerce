@@ -9,7 +9,7 @@ import CartProvider from './store/CartProvider';
 import Main from './Main';
 import About from './components/About/About';
 import Home from './components/Home/Home'
-
+import ContactUs from './components/ContactUs/ContactUs';
 
 import { createBrowserRouter,
   RouterProvider,
@@ -30,6 +30,10 @@ const router=createBrowserRouter([
 {
   path:'/Home',
   element:<Home/>
+},
+{
+  path:'/Contact',
+  element:<ContactUs/>
 }
 
 
