@@ -65,6 +65,7 @@ function Products() {
       <section className={classes.productContent}>
         <Row xs={2} md={2} lg={2} className={classes.productRow}>
           {productList}
+          
         </Row>
       </section>
     </div>

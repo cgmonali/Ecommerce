@@ -30,11 +30,11 @@ let id='';
      }
 
 
-  const removeItemFromCart = async (email, itemId) => {
+     const removeItemFromCart  = async (email, itemId) => {
 
     
-try{
-     await fetchDataHandler(email, itemId);
+      try{
+           await fetchDataHandler(email, itemId);
 
 if(id){
     await fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${email}/${id}`, {
