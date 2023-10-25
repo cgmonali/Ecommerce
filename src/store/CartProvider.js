@@ -30,11 +30,19 @@ let id='';
      }
 
 
+<<<<<<< HEAD
      const removeItemFromCart  = async (email, itemId) => {
 
     
       try{
            await fetchDataHandler(email, itemId);
+=======
+  const removeItemFromCart = async (email, itemId) => {
+
+    
+try{
+     await fetchDataHandler(email, itemId);
+>>>>>>> 32c7806 (Adding Login to Ecommerce,Protecting the product page,Making the cart user specific)
 
 if(id){
     await fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${email}/${id}`, {

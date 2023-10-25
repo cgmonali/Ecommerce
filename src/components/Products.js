@@ -65,7 +65,10 @@ function Products() {
       <section className={classes.productContent}>
         <Row xs={2} md={2} lg={2} className={classes.productRow}>
           {productList}
+<<<<<<< HEAD
           
+=======
+>>>>>>> 32c7806 (Adding Login to Ecommerce,Protecting the product page,Making the cart user specific)
         </Row>
       </section>
     </div>
