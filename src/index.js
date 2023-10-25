@@ -4,14 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// REACT BOOTSTRAP configuration
+import 'react-bootstrap/dist/react-bootstrap'; // Correct path to React Bootstrap JS
+import 'bootstrap/dist/css/bootstrap.css'; // Correct path to Bootstrap CSS
+import CartProvider from './store/CartProvider';
+import { AuthContextProvider } from './store/auth-context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <AuthContextProvider>
+  <CartProvider>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </ CartProvider>
+  </AuthContextProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+

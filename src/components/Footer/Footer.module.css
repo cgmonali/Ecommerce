@@ -1,0 +1,33 @@
+.footerContainer{
+   
+
+ 
+   margin-top: 100px;
+   
+   width: 100%;
+ 
+ 
+  display: flex;
+  justify-content: space-around;
+  height: 130px;
+  background-color: rgb(156, 245, 224);
+
+}
+
+.footertitle
+{
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+    letter-spacing: -2px;
+}
+
+.footericon{
+    display: flex;
+    justify-content: space-around;
+}
+a{
+   margin: 20px;
+   margin-top: 30px;
+   color: rgb(43, 144, 233);
+}

@@ -1,0 +1,33 @@
+.heading{
+    text-align: center;
+    margin: 30px;
+    font-weight: bolder;
+    font-size:40px;
+    letter-spacing: -2px;
+   
+}
+
+.theory{
+    flex: 1;
+    flex: 1; /* Allow text to fill available space */
+  text-align: justify; /* Justify text to improve the appearance */
+  margin-right: 20px; /* Add space to the right of the text */
+}
+.aboutContainer{
+   
+    align-items: flex-start; /* Align items at the top */
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  width: 900px;
+  margin: auto;
+}
+
+.imageClass{
+    margin: 40px;
+    width: 200px; /* Set the width of the circular image */
+    height: 200px; /* Set the height of the circular image */
+    border-radius: 50%; /* Makes the element a circle */
+    object-fit: cover; /* Ensures the image covers the entire circle */
+    float: left; 
+
+}

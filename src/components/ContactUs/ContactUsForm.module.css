@@ -1,0 +1,41 @@
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    
+    width: 600px;
+    height: auto;
+    background-color: rgb(39, 198, 209);
+    margin: 50px auto;
+}
+
+.contactbtn{
+    width: 20%;
+    background: #99e0f8;
+    color: rgb(10, 50, 102);
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px ;
+    
+}
+
+
+.inputholder{
+    margin: 60px;
+    font-size: large;
+    color: #12404f;
+    font-weight: bolder;
+    
+   
+}
+.inputname,.inputemail,.inputnumber{
+    border: 1px solid rgb(107, 201, 218);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 500px;
+    background-color: #cbe1e8;
+   
+}
