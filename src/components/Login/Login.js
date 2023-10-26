@@ -34,7 +34,7 @@ const Login = () => {
    
   async function fetchDataHandler(){
     const sanitizedEmail = enteredEmail.replace( /[@.]/g, "");
-    const response=await  fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${sanitizedEmail}`);
+    const response=await  fetch(`https://crudcrud.com/api/9f7ded3ef4b94dbab74faaa16ef11926/${sanitizedEmail}`);
     const data= await response.json();
 
     if(data.length>0)

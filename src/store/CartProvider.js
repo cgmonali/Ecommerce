@@ -6,7 +6,7 @@ import CartContext from './cart-context';
 
 const defaultCartState = {
   items: [],
-  totalAmount: 0,
+  totalAmount:0,
 }; 
 
 let id='';
@@ -14,7 +14,7 @@ let id='';
 
  async function fetchDataHandler(email,itemId){
      
-      const response=await  fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${email}`);
+      const response=await  fetch(`https://crudcrud.com/api/9f7ded3ef4b94dbab74faaa16ef11926/${email}`);
       const data= await response.json();
      console.log(data[0]._id)
      if(data.length>0)
@@ -30,30 +30,17 @@ let id='';
      }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
      const removeItemFromCart  = async (email, itemId) => {
+
 
     
       try{
            await fetchDataHandler(email, itemId);
-=======
-  const removeItemFromCart = async (email, itemId) => {
 
-    
-try{
-     await fetchDataHandler(email, itemId);
->>>>>>> 32c7806 (Adding Login to Ecommerce,Protecting the product page,Making the cart user specific)
-=======
-     const removeItemFromCart  = async (email, itemId) => {
-
-    
-      try{
-           await fetchDataHandler(email, itemId);
->>>>>>> ee553b0 (Adding Login to Ecommerce,Protecting the product page,Making the cart user specific)
 
 if(id){
-    await fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${email}/${id}`, {
+    await fetch(`https://crudcrud.com/api/9f7ded3ef4b94dbab74faaa16ef11926/${email}/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -95,7 +82,7 @@ updatedTotalAmount=state.totalAmount;
          updatedTotalAmount= state.totalAmount + action.item.price;
 
 
-         fetch(`https://crudcrud.com/api/f72585721f1346a88de6fd12990afa7d/${action.email}`, {
+         fetch(`https://crudcrud.com/api/9f7ded3ef4b94dbab74faaa16ef11926/${action.email}`, {
           method: 'POST',
           body: JSON.stringify({ item: action.item}),
           headers: {
